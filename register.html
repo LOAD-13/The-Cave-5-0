@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesión</title>
+    <title>Registro</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/thea cave icon.jpeg">
     <style>
         #formulario {
             position: fixed;
@@ -59,88 +58,30 @@
         .formulario button:hover {
             background-color: rgb(90, 9, 9);
         }
-        .header {
-            display: none;
-        }
-        .registro-link {
-            text-align: center;
-            margin-top: 260px;
-        }
-        .registro-link a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        .registro-link a:hover {
-            text-decoration: underline;
-        }
     </style>
     <script>
-        window.addEventListener("load", function() {
-            document.getElementById("loader").style.display = "none";
-
-            if (localStorage.getItem("loggedIn") === "true") {
-                mostrarHeader();
-            }
-        });
-
-        function mostrarHeader() {
-            document.querySelector(".header").style.display = "block";
-            document.querySelector(".btn-1").innerHTML = '<img src="img/logo persona2.png" alt="User" style="width: 24px; height: 24px;">';
-        }
-
-        function validarLogin(event) {
+        function registrarUsuario(event) {
             event.preventDefault();
-
-            const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
             const nombre = document.getElementById('nombre').value;
             const correo = document.getElementById('correo').value;
             const contrasena = document.getElementById('contrasena').value;
 
-            const usuarioValido = usuarios.find(usuario =>
-                usuario.nombre === nombre &&
-                usuario.correo === correo &&
-                usuario.contrasena === contrasena
-            );
+            const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
-            if (usuarioValido) {
-                alert('Inicio de sesión exitoso');
-                localStorage.setItem("loggedIn", "true");
-                mostrarHeader();
-            } else {
-                alert('Nombre de usuario, correo o contraseña incorrectos');
-            }
+            usuarios.push({ nombre, correo, contrasena });
+
+            localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+            alert('Registro exitoso. Ahora puedes iniciar sesión.');
+            window.location.href = 'index.html'; // Redirigir a la página de inicio de sesión
         }
     </script>
 </head>
 <body background="img/Netflix-Background-prueba-1 (1).jpg">
-    <div id="loader">
-        <div class="spinner"></div>
-    </div>
-    <header class="header">
-        <div class="menu container">
-            <a href="#" class="logo">Cave</a>
-            <input type="checkbox" id="menu"/>
-            <label for="menu">
-                <img src="img/menu.png" class="menu-icono" alt="menu">
-            </label>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="inicio.html">Inicio</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="peliculas.html">Peliculas</a></li>
-                    <li><a href="Series.html">Series</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-            <a href="#" class="btn-1">Login</a>
-        </div>
-        <div class="header-content container">
-        </div>
-    </header>
     <div class="formulario">
-        <center><h1>Inicio de sesión</h1></center>
-        <form id="formulario" onsubmit="validarLogin(event)">
+        <center><h1>Registro</h1></center>
+        <form id="formulario" onsubmit="registrarUsuario(event)">
             <div class="username">
                 <input type="text" id="nombre" name="nombre" placeholder="Por favor ingrese su nombre de usuario" required>
             </div>
@@ -151,13 +92,9 @@
                 <input type="password" id="contrasena" name="contrasena" placeholder="Por favor ingrese su contraseña" required>
             </div>
             <div class="registrarse">
-                <button type="submit" class="btn-1">Iniciar sesión</button>
+                <button type="submit" class="btn-1">Registrarse</button>
             </div>
         </form>
     </div>
-    <div class="registro-link">
-        <p>¿No tienes cuenta? <a href="register.html">Regístrate aquí</a></p>
-    </div>
 </body>
 </html>
-

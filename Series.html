@@ -7,8 +7,18 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/thea cave icon.jpeg">
    
-</head>
-<body>
+	<script>
+		window.addEventListener("load", function() {
+		// Oculta la pantalla de carga
+		document.getElementById("loader").style.display = "none";
+		});
+		</script>
+	
+	</head>
+	<body>
+		<div id="loader">
+			<div class="spinner"></div>
+		</div>
     <header  class="header">
         <div id="header_bonito">
                  <!-- Radio buttons para controlar las imágenes -->
@@ -25,7 +35,7 @@
     </div>
         <div class="menu container">
 
-            <a href="index.html" class="logo">Cave</a>
+            <a href="inicio.html" class="logo">Cave</a>
             <input type="checkbox" id="menu"/>
             <label for="menu">
 
@@ -33,14 +43,14 @@
             </label>
             <nav class="navbar">
                 <ul>
-                    <li><a href="index.html" >Inicio</a></li>
+                    <li><a href="inicio.html" >Inicio</a></li>
                     <li><a href="nosotros.html">Nosotros</a></li>
                     <li><a href="peliculas.html">Peliculas</a></li>
                     <li><a href="Series.html">Series</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
-            <a href="login.html" class="btn-1">Login</a>
+            <a href="index.html" class="btn-1">Login</a>
         </div>
 
         <div class="header-content container">
@@ -75,163 +85,91 @@
         </div>
 
 
-		<div class="peliculas-recomendadas contenedor">
-			<div class="contenedor-titulo-controles">
-				<h3>Películas Recomendadas</h3>
-				<div class="indicadores"></div>
+	</div>
+
+	<button role="button" id="flecha-izquierda" class="flecha-izquierda" style="display: none;"><i class="fas fa-angle-left"></i></button>
+
+	
+
+
+
+	<button role="button" id="flecha-derecha" class="flecha-derecha" style="display: none;"><i class="fas fa-angle-right"></i></button>
+</div>
+
+<div class="peliculas-accion contenedor">
+<div class="contenedor-titulo-controles">
+	<h3>Películas de Acción</h3>
+	<div class="indicadores-accion"></div> <!-- Asegúrate de que este identificador sea único -->
+</div>
+
+<div class="contenedor-principal">
+	<button role="button" id="flecha-izquierda-accion" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button> <!-- Asegúrate de que este identificador sea único -->
+
+	<div class="contenedor-carousel-accion"> <!-- Asegúrate de que este identificador sea único -->
+		<div class="carousel-accion"> <!-- Asegúrate de que este identificador sea único -->
+			<div class="pelicula">
+				<a href="iroman3.html"><img src="img/iron man 3 600.jpg" alt=""></a>
 			</div>
-
-			<div class="contenedor-principal">
-				<button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
-
-				<div class="contenedor-carousel">
-					<div class="carousel">
-						<div class="pelicula">
-							<a href="ThorLoveAndThunder.html"><img src="img/thor love 600.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="ThorRagnarok.html"><img src="img/ragnarok 600.jpeg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="El origen de un imperio.html"><img src="img/300 600 real.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="Project power .html"><img src="img/proyect power 600.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="La vieja guardia.html"><img src="img/old guard.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="Spectal.html"><img src="img/spectral 600.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/7.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/1.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/2.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/3.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/1.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/2.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/3.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/4.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/5.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/6.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/7.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/1.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/2.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/3.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/4.png" alt=""></a>
-						</div>
-					</div>
-				</div>
-
-
-
-				<button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+			<div class="pelicula">
+				<a href="venom.html"><img src="img/venom 600.jpeg" alt=""></a>
 			</div>
-		</div>
-
-		<div class="peliculas-accion contenedor">
-			<div class="contenedor-titulo-controles">
-				<h3>Películas de Acción</h3>
-				<div class="indicadores-accion"></div> <!-- Asegúrate de que este identificador sea único -->
+			<div class="pelicula">
+				<a href="venom 2 carnage.html"><img src="img/venom 2 600.webp" alt=""></a>
 			</div>
-		
-			<div class="contenedor-principal">
-				<button role="button" id="flecha-izquierda-accion" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button> <!-- Asegúrate de que este identificador sea único -->
-		
-				<div class="contenedor-carousel-accion"> <!-- Asegúrate de que este identificador sea único -->
-					<div class="carousel-accion"> <!-- Asegúrate de que este identificador sea único -->
-						<div class="pelicula">
-							<a href="iroman3.html"><img src="img/iron man 3 600.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="venom.html"><img src="img/venom 600.jpeg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="venom 2 carnage.html"><img src="img/venom 2 600.webp" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="Spidey NowayHome.html"><img src="img/spiderman 600.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="infinity.html"><img src="img/infinity 600.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="endgame.html"><img src="img/end game 600.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="mad max.html"><img src="img/mad max 600.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="durodematar.html"><img src="img/duro de matar 600.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="duro de matar good day.html"><img src="img/duro de matar gooday 600.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/3.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/1.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/2.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/3.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/4.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/5.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/6.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/7.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/1.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/2.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/3.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/imagenes carrusel/4.png" alt=""></a>
-						</div>
+			<div class="pelicula">
+				<a href="Spidey NowayHome.html"><img src="img/spiderman 600.jpg" alt=""></a>
+			</div>
+			<div class="pelicula">
+				<a href="infinity.html"><img src="img/infinity 600.jpg" alt=""></a>
+			</div>
+			<div class="pelicula">
+				<a href="endgame.html"><img src="img/end game 600.jpg" alt=""></a>
+			</div>
+			<div class="pelicula">
+				<a href="mad max.html"><img src="img/mad max 600.jpg" alt=""></a>
+			</div>
+			<div class="pelicula">
+				<a href="durodematar.html"><img src="img/duro de matar 600.png" alt=""></a>
+			</div>
+			<div class="pelicula">
+				<a href="duro de matar good day.html"><img src="img/duro de matar gooday 600.jpg" alt=""></a>
+			</div>
+			<div class="pelicula">
+				<a href="ThorRagnarok.html"><img src="img/ragnarok 600.jpeg" alt=""></a>
+			</div>
+			<div class="pelicula">
+				<a href="ThorLoveAndThunder.html"><img src="img/thor love 600.jpg" alt=""></a>
+			</div>
+			<div class="pelicula">
+				<a href="El origen de un imperio.html"><img src="img/300 600 real.jpg" alt=""></a>
+			</div>
+			<div class="pelicula">
+				<a href="Project power .html"><img src="img/proyect power 600.jpg" alt=""></a>
+			</div>
+			<div class="pelicula">
+				<a href="La vieja guardia.html"><img src="img/old guard.jpg" alt=""></a>
+			</div>
+			<div class="pelicula">
+				<a href="#"><img src="img/imagenes carrusel/5.png" alt=""></a>
+			</div>
+			<div class="pelicula">
+				<a href="#"><img src="img/imagenes carrusel/6.png" alt=""></a>
+			</div>
+			<div class="pelicula">
+				<a href="#"><img src="img/imagenes carrusel/7.png" alt=""></a>
+			</div>
+			<div class="pelicula">
+				<a href="#"><img src="img/imagenes carrusel/1.png" alt=""></a>
+			</div>
+			<div class="pelicula">
+				<a href="#"><img src="img/imagenes carrusel/2.png" alt=""></a>
+			</div>
+			<div class="pelicula">
+				<a href="#"><img src="img/imagenes carrusel/3.png" alt=""></a>
+			</div>
+			<div class="pelicula">
+				<a href="#"><img src="img/imagenes carrusel/4.png" alt=""></a>
+			</div>
 					</div>
 				</div>
 		
@@ -485,7 +423,7 @@
 	<footer class="footer container">
         <h3>Cave</h3>
         <ul>
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="inicio.html">Inicio</a></li>
             <li><a href="nosotros.html">Nosotros</a></li>
             <li><a href="peliculas.html">Peliculas</a></li>
             <li><a href="contacto.html">Contacto</a></li>

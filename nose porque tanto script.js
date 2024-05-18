@@ -170,11 +170,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const buscarPorLetra = (letra) => {
         resultadosBusqueda.innerHTML = ""; // Limpiar los resultados anteriores
 
-        // Cargar el contenido de index.html
-        fetch("index.html")
+        // Cargar el contenido de inicio.html
+        fetch("inicio.html")
             .then(response => {
                 if (!response.ok) {
-                    throw new Error("Error al cargar el archivo index.html");
+                    throw new Error("Error al cargar el archivo inicio.html");
                 }
                 return response.text();
             })

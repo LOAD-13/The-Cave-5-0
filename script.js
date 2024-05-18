@@ -79,6 +79,15 @@ function redirectToRandomHTML() {
 // Asigna el evento click al botón "Ver ahora"
 document.getElementById('play-video-1').addEventListener('click', redirectToRandomHTML);
 
+//Pantalla de carga
+// Espera a que se cargue todo el contenido de la página
+window.addEventListener("load", function() {
+    // Oculta la pantalla de carga
+    document.getElementById("loader").style.display = "none";
+});
+
+
+
 
     
 

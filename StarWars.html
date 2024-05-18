@@ -22,8 +22,18 @@
          background-image: url(img/star\ wars\ hd\ wallpaper.jpg); /* Ruta de tu imagen */
         }
     </style>
+<script>
+    window.addEventListener("load", function() {
+    // Oculta la pantalla de carga
+    document.getElementById("loader").style.display = "none";
+    });
+    </script>
+
 </head>
 <body>
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
     <header class="header" >
 
         <div id="header_bonito_pelis">
@@ -32,21 +42,21 @@
                 
         <div class="menu container">
 
-            <a href="#" class="logo">Cave</a>
+            <a href="inicio.html" class="logo">Cave</a>
             <input type="checkbox" id="menu"/>
             <label for="menu">
                 <img src="img/menu.png" class="menu-icono" alt="menu">
             </label>
             <nav class="navbar">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="inicio.html">Inicio</a></li>
                     <li><a href="nosotros.html">Nosotros</a></li>
                     <li><a href="peliculas.html">Peliculas</a></li>
                     <li><a href="Series.html">Series</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
-            <a href="login.html" class="btn-1">Login</a>
+            <a href="index.html" class="btn-1">Login</a>
         </div>
 
         <div class="header-content container">
@@ -93,6 +103,36 @@
         </center>
         <!-- iframe para reproducir el tráiler de la película -->
     </div>
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://the-cave-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<footer class="footer container">
+    <h3>Cave</h3>
+    <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="peliculas.html">Peliculas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+</footer>
     
     <script src="boton ver pelicula.js"></script>
 

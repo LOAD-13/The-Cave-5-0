@@ -32,6 +32,9 @@ document.getElementById('ver-pelicula-btn').addEventListener('click', toggleCont
 // Obtener el botón
 var btn = document.getElementById("ver-pelicula-btn");
 
+
+
+
 // Agregar un evento click al botón
 btn.addEventListener("click", function() {
     // Obtener el texto actual del botón
@@ -43,4 +46,6 @@ btn.addEventListener("click", function() {
     } else {
         this.textContent = "Ver Pelicula";
     }
+
+    
 });
